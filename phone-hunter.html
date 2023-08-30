@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <main>
+    <section class="m-11">
+      <input id="searchId" type="text" placeholder="Search" class="input input-ghost w-full max-w-xs" />
+      <button onclick="searchText()" class="btn btn-active btn-accent">Search</button>
+    </section>
+    <section class="text-center">
+      <span class="loading loading-spinner loading-lg hidden" id="lodingId"></span>
+    </section>
+    <section id="card-cointainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-11">
+    
+    </section>
+    <section class="text-center">
+      <button class="btn btn-secondary hidden" onclick="showMoreButton()" id="showMore">Secondary</button>
+    </section>
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="modalbtn.showModal()">open modal</button> -->
+<dialog id="modalbtn" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+   <div id="addPhoneDetails"></div>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+  </main>
+
+   <script src="phone-hunter.js"></script>
+</body>
+</html>
